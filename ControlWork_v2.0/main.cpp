@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include"Matrix.h"
 #include"Matrix.cpp"
 using namespace std;
@@ -9,7 +9,7 @@ void main()
 {
 	setlocale(LC_ALL, "Russian");
 	int m, n;
-	cout << "Ââåäèòå ðàçìåð ìàòðèöû (êîëè÷åñòâî ñòðîê è ñòîëáöîâ):" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ (ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº Ð¸ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²):" << endl;
 	cin >> m >> n;
 	cout << delimiter << endl;
 	cout << "One Matrix" << endl;
@@ -17,7 +17,7 @@ void main()
 	M.Rand();
 	M.print();
 	//cout << delimiter << endl;
-	//cout << M;  // Ïåðåãðóæåííûé îïåðàòîð âûâîäà.
+	//cout << M;  // ÐŸÐµÑ€ÐµÐ³Ñ€ÑƒÐ¶ÐµÐ½Ð½Ñ‹Ð¹ Ð¾Ð¿ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð²Ñ‹Ð²Ð¾Ð´Ð°.
 	cout << delimiter << endl;
 	cout << "Two Matrix" << endl;
 	Matrix<int> M1(m, n);

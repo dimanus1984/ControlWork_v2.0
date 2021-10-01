@@ -1,4 +1,4 @@
-#include "Matrix.h"
+п»ї#include "Matrix.h"
 
 template<typename T>
 inline int Matrix<T>::get_M() const
@@ -48,12 +48,12 @@ Matrix<T>::Matrix(int m, int n)	// Constructor with two parameters.
 {
 	this->m = m;
 	this->n = n;
-	// 1) Создаем массив указателей:
+	// 1) РЎРѕР·РґР°РµРј РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№:
 	M = new T * [m];
-	// 2) Выделяем память под строки двумерного массива:
+	// 2) Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ СЃС‚СЂРѕРєРё РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°:
 	for (int i = 0; i < m; i++)
 		M[i] = new T[n]{};
-	// 3) Заполняем массив нулями:
+	// 3) Р—Р°РїРѕР»РЅСЏРµРј РјР°СЃСЃРёРІ РЅСѓР»СЏРјРё:
 	for (int i = 0; i < m; i++)
 		for (int j = 0; j < n; j++)
 			M[i][j] = 0;
@@ -84,7 +84,7 @@ Matrix<T>::Matrix(Matrix&& right)	// MoveConstructor.
 	this->M = right.M;
 	this->m = right.m;
 	this->n = right.m;
-	right.M = nullptr;	//Указатель на ноль (NULL pointer) - указатель в никуда.
+	right.M = nullptr;	//РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РЅРѕР»СЊ (NULL pointer) - СѓРєР°Р·Р°С‚РµР»СЊ РІ РЅРёРєСѓРґР°.
 }
 
 template<typename T>
@@ -98,7 +98,7 @@ Matrix<T> Matrix<T>::operator=(const Matrix& right)	// CopyAssignment.
 {
 	if (n > 0)
 	{
-		for (int i = 0; i < m; i++)	// освободить память, выделенную ранее для объекта *this
+		for (int i = 0; i < m; i++)	// РѕСЃРІРѕР±РѕРґРёС‚СЊ РїР°РјСЏС‚СЊ, РІС‹РґРµР»РµРЅРЅСѓСЋ СЂР°РЅРµРµ РґР»СЏ РѕР±СЉРµРєС‚Р° *this
 			delete[] M[i];
 	}
 	if (m > 0)
@@ -128,7 +128,7 @@ Matrix<T>& Matrix<T>::operator=(Matrix&& right)	// MoveAssignment.
 	if (this == &right)return *this;
 	if (n > 0)
 	{
-		for (int i = 0; i < m; i++)	// освободить память, выделенную ранее для объекта *this
+		for (int i = 0; i < m; i++)	// РѕСЃРІРѕР±РѕРґРёС‚СЊ РїР°РјСЏС‚СЊ, РІС‹РґРµР»РµРЅРЅСѓСЋ СЂР°РЅРµРµ РґР»СЏ РѕР±СЉРµРєС‚Р° *this
 			delete[] M[i];
 	}
 	if (m > 0)
@@ -173,7 +173,7 @@ Matrix<T> Matrix<T>::operator-(const Matrix& right)
 template<typename T>
 Matrix<T>& Matrix<T>::operator[](int i)
 {
-	return M[i];	// Возврат ссылки на элемент массива.
+	return M[i];	// Р’РѕР·РІСЂР°С‚ СЃСЃС‹Р»РєРё РЅР° СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР°.
 }
 
 template<typename T>

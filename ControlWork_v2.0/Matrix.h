@@ -1,13 +1,13 @@
-#pragma once
+п»ї#pragma once
 #include<iostream>
 using namespace std;
-template <class T>	// Шаблонный класс Матрица.
+template <class T>	// РЁР°Р±Р»РѕРЅРЅС‹Р№ РєР»Р°СЃСЃ РњР°С‚СЂРёС†Р°.
 
 class Matrix
 {
 	T** M;
-	int m; // Количество строк.
-	int n; // Количество столбцов.
+	int m; // РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє.
+	int n; // РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ.
 
 public:
 	int get_M()const;
@@ -29,7 +29,7 @@ public:
 	Matrix& operator=(Matrix&& right);		// MoveAssignment.
 	Matrix operator+(const Matrix& right);
 	Matrix operator-(const Matrix& right);
-	Matrix& operator[](int i);	// Перегруженный оператор взятия индекса.
+	Matrix& operator[](int i);	// РџРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ РІР·СЏС‚РёСЏ РёРЅРґРµРєСЃР°.
 
 	//	Methods:
 	void Rand();
